@@ -5,12 +5,6 @@
 }
 
 :root {
-  --img-color-1: #92c952;
-  --img-color-2: #771796;
-  --img-color-3: #24f355;
-  --img-color-4: #d32776;
-  --img-color-5: #f66b97;
-  --img-color-6: #56a8c2;
   --card-bg-color: white;
 }
 
@@ -21,7 +15,7 @@ img {
 
 #header {
   background-image: url("../img/wall.png");
-  height: 120px;
+  min-height: 120px;
 }
 
 .title {
@@ -35,6 +29,7 @@ img {
 
 #main {
   background-image: url("../img/cork.png");
+  min-height: 600px;
 }
 
 .container {
@@ -124,53 +119,25 @@ img {
 .card {
   background-color: var(--card-bg-color);
   position: relative;
+  padding: 1rem;
+}
+
+date {
+  font-family: "Sometype Mono", "monospace";
+}
+
+#img-title {
+  font-family: "Edu Tas Beginner", sans-serif;
 }
 
 #pin {
   position: absolute;
-  left: 45%;
-  top: -5%;
-}
-
-.card-container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 20px 0;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
 }
 
 .card-body p {
   padding: 0.7rem 0;
   font-family: "Edu Tas Beginner", sans-serif;
 }
-
-/* imagine box to remove later */
-#img-ph {
-  height: 250px;
-  width: 250px;
-}
-
-.img-1 {
-  background-color: var(--img-color-1);
-}
-
-.img-2 {
-  background-color: var(--img-color-2);
-}
-
-.img-3 {
-  background-color: var(--img-color-3);
-}
-
-.img-4 {
-  background-color: var(--img-color-4);
-}
-
-.img-5 {
-  background-color: var(--img-color-5);
-}
-
-.img-6 {
-  background-color: var(--img-color-6);
-}
-
-/* end to remove section */

@@ -1,0 +1,38 @@
+//inserisco i riferimenti di cui avrò bisogno
+const rowEl = document.querySelector(".row")
+
+//ciclo per prendere i singoli elementi all'interno dell'array di oggeti
+for (let i=0; i < 6; i++) {
+    
+    //inizializzo una stringa in cui salvo il post markup
+    let markupStr = "";
+
+    //effettuo la chiamata API
+    fetch("https://lanciweb.github.io/demo/api/pictures/")
+    
+    //trasformo la risposta in json
+    .then(response => response.json())
+    .then(data => {    
+    
+    //destrutturo
+    const {title, date, url} = data[i];
+
+    //genero il markup
+    markupStr = `<div class="col-4">
+                    <div class="card">
+                        <img id="pin" src="./assets/img/pin.svg" alt="pin.svg">
+                        <img class="image" src="${url}" alt="img.png">
+                        <div class="card-body">
+                            <h4 id="img-title">${title}</h4>
+                            <p id="img-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, sequi!</p>
+                            <date>${date}</date>
+                        </div> 
+                    </div>
+                </div>`
+
+    //aggiorno la DOM
+    rowEl.innerHTML += markupStr;
+
+    })
+
+}
