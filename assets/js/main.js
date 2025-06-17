@@ -18,7 +18,7 @@ for (let i=0; i < 6; i++) {
     const {title, date, url} = data[i];
 
     //genero il markup
-    markupStr = `<div class="col-4">
+    markupStr = `<div class="col-4 col-6-md col-12-sm ">
                     <div class="card">
                         <img id="pin" src="./assets/img/pin.svg" alt="pin.svg">
                         <img class="image" src="${url}" alt="img.png">

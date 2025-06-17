@@ -29,7 +29,7 @@ img {
 
 #main {
   background-image: url("../img/cork.png");
-  min-height: 600px;
+  min-height: 800px;
 }
 
 .container {
@@ -140,4 +140,121 @@ date {
 .card-body p {
   padding: 0.7rem 0;
   font-family: "Edu Tas Beginner", sans-serif;
+}
+
+/*MEDIA QUERIES*/
+
+/*TABLET*/
+@media screen and (max-width: 992px) {
+  .col-1-md {
+    width: calc(100% / 12 * 1);
+    flex-grow: 1;
+  }
+
+  .col-2-md {
+    width: calc(100% / 12 * 2);
+  }
+
+  .col-3-md {
+    width: calc(100% / 12 * 3);
+  }
+
+  .col-4-md {
+    width: calc(100% / 12 * 4);
+  }
+
+  .col-5-md {
+    width: calc(100% / 12 * 5);
+  }
+
+  .col-6-md {
+    width: calc(100% / 12 * 6);
+  }
+
+  .col-7-md {
+    width: calc(100% / 12 * 7);
+  }
+
+  .col-8-md {
+    width: calc(100% / 12 * 8);
+  }
+
+  .col-9-md {
+    width: calc(100% / 12 * 9);
+  }
+
+  .col-10-md {
+    width: calc(100% / 12 * 10);
+  }
+
+  .col-11-md {
+    width: calc(100% / 12 * 11);
+  }
+
+  .col-12-md {
+    width: calc(100% / 12 * 12);
+  }
+
+  .title {
+    font-size: 70px;
+    padding: 0.8rem 0;
+  }
+}
+
+/*MOBILE*/
+
+@media screen and (max-width: 698px) {
+  .col-1-sm {
+    width: calc(100% / 12 * 1);
+    flex-grow: 1;
+  }
+
+  .col-2-sm {
+    width: calc(100% / 12 * 2);
+  }
+
+  .col-3-sm {
+    width: calc(100% / 12 * 3);
+  }
+
+  .col-4-sm {
+    width: calc(100% / 12 * 4);
+  }
+
+  .col-5-sm {
+    width: calc(100% / 12 * 5);
+  }
+
+  .col-6-sm {
+    width: calc(100% / 12 * 6);
+  }
+
+  .col-7-sm {
+    width: calc(100% / 12 * 7);
+  }
+
+  .col-8-sm {
+    width: calc(100% / 12 * 8);
+  }
+
+  .col-9-sm {
+    width: calc(100% / 12 * 9);
+  }
+
+  .col-10-sm {
+    width: calc(100% / 12 * 10);
+  }
+
+  .col-11-sm {
+    width: calc(100% / 12 * 11);
+  }
+
+  .col-12-sm {
+    width: calc(100% / 12 * 12);
+  }
+
+  .title {
+    font-size: 80px;
+    padding: 0.6rem 0;
+  }
 }
