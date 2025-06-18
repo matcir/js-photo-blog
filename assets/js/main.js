@@ -38,20 +38,21 @@ for (let i=0; i < 6; i++) {
     //aggiorno la DOM
     rowEl.innerHTML += markupStr;
     
-
     //prendo i riferimenti alle immagini e all'overlay
-    const imgEl = document.querySelector(".image");
+    const imgElements = document.querySelectorAll(".image");
     const overlayEl = document.getElementById("overlay")
-    console.log(imgEl)
+    console.log(imgElements);
+
     
-    //aggiungo l'evento che mi faccia ricomparire l'overlay al click sull'immagine
-    imgEl.addEventListener("click", () => {
+    //aggiungo l'evento che mi faccia ricomparire l'overlay al click sull'immagine, iterando nell'array dove mi si sono salvati i vari riferimenti delle immagini
+    imgElements.forEach(img => { 
+        img.addEventListener("click", () => { 
+            overlayEl.classList.remove("d-none");
+            myImg.src = url; 
+        });
+    });
     
-        overlayEl.classList.remove("d-none");
-        myImg.src = url;
-    
-    })
-    
+    //aggiungo l'evento che mi faccia chiudere l'overlay al click sul pulsante
     btnEl.addEventListener("click", () => {
         overlayEl.classList.add("d-none");
     })
