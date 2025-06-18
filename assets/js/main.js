@@ -1,11 +1,15 @@
 //inserisco i riferimenti di cui avrò bisogno
 const rowEl = document.querySelector(".row");
 const btnEl = document.getElementById("close");
+const myImg = document.querySelector("#overlay img")
+
+
+//inizializzo una stringa in cui salvo il post markup
 
 //ciclo per prendere i singoli elementi all'interno dell'array di oggeti
 for (let i=0; i < 6; i++) {
     
-    //inizializzo una stringa in cui salvo il post markup
+    //azzero la stringa
     let markupStr = "";
 
     //effettuo la chiamata API
@@ -33,24 +37,30 @@ for (let i=0; i < 6; i++) {
 
     //aggiorno la DOM
     rowEl.innerHTML += markupStr;
+    
 
+    //prendo i riferimenti alle immagini e all'overlay
+    const imgEl = document.querySelector(".image");
+    const overlayEl = document.getElementById("overlay")
+    console.log(imgEl)
+    
+    //aggiungo l'evento che mi faccia ricomparire l'overlay al click sull'immagine
+    imgEl.addEventListener("click", () => {
+    
+        overlayEl.classList.remove("d-none");
+        myImg.src = url;
+    
+    })
+    
+    btnEl.addEventListener("click", () => {
+        overlayEl.classList.add("d-none");
+    })
+        
     })
 
 }
 
-//prendo i riferimenti alle immagini e all'overlay
-const imgEl = document.querySelectorAll(".image");
-const overlayEl = document.getElementById("overlay")
 
-
-//aggiungo l'evento che mi faccia ricomparire l'overlay al click sull'immagine
-imgEl.addEventListener("click", () => {
-    overlayEl.classList.remove("d-none");
-})
-
-btnEl.addEventListener("click", () => {
-    overlayEl.classList.add("d-none");
-})
 
 
 
