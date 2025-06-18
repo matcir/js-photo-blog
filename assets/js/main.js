@@ -21,6 +21,7 @@ for (let i=0; i < 6; i++) {
     
     //destrutturo
     const {title, date, url} = data[i];
+    
 
     //genero il markup
     markupStr = `<div class="col-4 col-6-md col-12-sm ">
@@ -41,14 +42,13 @@ for (let i=0; i < 6; i++) {
     //prendo i riferimenti alle immagini e all'overlay
     const imgElements = document.querySelectorAll(".image");
     const overlayEl = document.getElementById("overlay")
-    console.log(imgElements);
 
     
     //aggiungo l'evento che mi faccia ricomparire l'overlay al click sull'immagine, iterando nell'array dove mi si sono salvati i vari riferimenti delle immagini
     imgElements.forEach(img => { 
         img.addEventListener("click", () => { 
             overlayEl.classList.remove("d-none");
-            myImg.src = url; 
+            myImg.src = url;
         });
     });
     
