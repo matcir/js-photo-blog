@@ -162,6 +162,13 @@ date {
   cursor: pointer;
 }
 
+.card:hover {
+  transform: scale(1.1);
+  transform: rotate(10deg);
+  box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.7);
+  transition-duration: 0.3s;
+}
+
 #img-title {
   font-family: "Edu Tas Beginner", sans-serif;
 }
