@@ -1,5 +1,6 @@
 //inserisco i riferimenti di cui avrò bisogno
-const rowEl = document.querySelector(".row")
+const rowEl = document.querySelector(".row");
+const btnEl = document.getElementById("close");
 
 //ciclo per prendere i singoli elementi all'interno dell'array di oggeti
 for (let i=0; i < 6; i++) {
@@ -36,3 +37,21 @@ for (let i=0; i < 6; i++) {
     })
 
 }
+
+//prendo i riferimenti alle immagini e all'overlay
+const imgEl = document.querySelector(".image");
+const overlayEl = document.getElementById("overlay")
+
+
+//aggiungo l'evento che mi faccia ricomparire l'overlay al click sull'immagine
+imgEl.addEventListener("click", () => {
+    overlayEl.classList.remove("d-none");
+})
+
+btnEl.addEventListener("click", () => {
+    overlayEl.classList.add("d-none");
+})
+
+
+
+
