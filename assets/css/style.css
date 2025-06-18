@@ -157,6 +157,11 @@ date {
   font-family: "Sometype Mono", "monospace";
 }
 
+.card img:hover,
+#close {
+  cursor: pointer;
+}
+
 #img-title {
   font-family: "Edu Tas Beginner", sans-serif;
 }
