@@ -39,7 +39,7 @@ for (let i=0; i < 6; i++) {
 }
 
 //prendo i riferimenti alle immagini e all'overlay
-const imgEl = document.querySelector(".image");
+const imgEl = document.querySelectorAll(".image");
 const overlayEl = document.getElementById("overlay")
 
 
